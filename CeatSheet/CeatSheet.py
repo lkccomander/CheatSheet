@@ -24,7 +24,7 @@ from pymongo import MongoClient
 
 db = "CheatSheet"
 
-print("This would create first object of CCMP class")
+print("This would create first object of CCMP class 2")
 
 #miConexion = Conn("CheatSheet")
 #miConexion.closeConexion()
@@ -46,7 +46,11 @@ ccmpCode1.displayCCMPcode()
 print("This would create first object XX of CCMP class")
 ccmpCode2 = Conn("CheatSheet","123")
 ccmpCode2.getall()
-print("XX-----xx-------------------------------------------------------------")
+
+print("------------------------------------------------------------------")
+
+print("------------------------------------------------------------------")
+
 
 
 #miConexion = Conn("CheatSheet","123")
