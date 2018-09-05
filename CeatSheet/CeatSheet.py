@@ -19,7 +19,7 @@ import pymongo
 
 db = "CheatSheet"
 
-print("This would create first object of CCMP class")
+print("This would create first object of CCMP class 2")
 
 #miConexion = Conn("CheatSheet")
 #miConexion.closeConexion()
