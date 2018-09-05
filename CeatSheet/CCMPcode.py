@@ -1,7 +1,7 @@
 import code
 
 class CCMPcode:
-    """description of class 6-6"""
+    """description of class """
         
     name = ""
     category = ""
