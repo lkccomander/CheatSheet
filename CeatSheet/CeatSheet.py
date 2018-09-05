@@ -46,7 +46,7 @@ ccmpCode1.displayCCMPcode()
 print("This would create first object XX of CCMP class")
 ccmpCode2 = Conn("CheatSheet","123")
 ccmpCode2.getall()
-print("------------------------------------------------------------------")
+print("XX-----xx-------------------------------------------------------------")
 
 
 #miConexion = Conn("CheatSheet","123")
