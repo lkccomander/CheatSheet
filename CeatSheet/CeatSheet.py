@@ -1,8 +1,12 @@
+import random
+import pymongo
 from CCMPcode import CCMPcode
 from class2 import class2
 from Conn import Conn
-import random
-import pymongo
+from pymongo import MongoClient
+
+#https://hackernoon.com/turning-vs-code-into-a-killer-mongodb-admin-tool-2514f1596a6c
+#https://code.visualstudio.com/docs/python/python-tutorial
 
 #C:\Users\Andres_2\source\repos\CeatSheet\CeatSheet\Conn.py
 #C:\Users\Andres_2\source\repos\CeatSheet\CeatSheet\CCMPcode.py
@@ -15,7 +19,8 @@ import pymongo
 
 #print(client.list_database_names())
 
-#print(db.list_collection_names())
+#print(db.list_collection_names())exit
+
 
 db = "CheatSheet"
 
@@ -46,9 +51,3 @@ print("------------------------------------------------------------------")
 
 #miConexion = Conn("CheatSheet","123")
 #miConexion.closeConexion()
-
-
-
-
-
-

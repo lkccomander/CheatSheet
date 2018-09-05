@@ -25,15 +25,17 @@ class Conn():
          self.db = pdb
          self.port = pport
          self = pymongo.MongoClient("mongodb+srv://userMongo4:123admina@cluster0-0njxn.mongodb.net/test?retryWrites=true")
-         
-    
+             
     def closeConexion(self):
           print ("Error on Closing")
-
 
     def getall(self):
            self = pymongo.MongoClient("mongodb+srv://userMongo4:123admina@cluster0-0njxn.mongodb.net/test?retryWrites=true")
            print(self.list_database_names())
+
+    def gettoo(self):
+           self = pymongo.MongoClient("mongodb+srv://userMongo4:123admina@cluster0-0njxn.mongodb.net/test?retryWrites=true")
+           print(self.get_default_database())
 
 
  
