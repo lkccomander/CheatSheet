@@ -45,10 +45,13 @@ ccmpCode1.displayCCMPcode()
 
 print("This would create first object XX of CCMP class")
 ccmpCode2 = Conn("CheatSheet","123")
+print("-------------------------------KAROL La Niña de las flores-1--------------------------------")
 ccmpCode2.getall()
+print("-------------------------------KAROL La Niña de las flores-2--------------------------------")
 ccmpCode2.setDB(db)
+print("-------------------------------KAROL La Niña de las flores-3--------------------------------")
 print(ccmpCode2.db)
-
+print("-------------------------------KAROL La Niña de las flores-4--------------------------------")
 ccmpCode2.getDB(db)
 
 

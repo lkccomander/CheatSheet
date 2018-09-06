@@ -1,5 +1,6 @@
 
 from pymongo import MongoClient
+from UtilService import UtilService
 import pymongo
 import json
 from bson import BSON
@@ -28,13 +29,20 @@ class Conn():
         mydb = self1.CheatSheet
         mycol = mydb.CheatSheet
         single_doc = mycol.find().sort("name", -1)
+        
         for x in single_doc:
             print(x)
-        #json_doc = json.dumps(single_doc,default=json_util.default)
-        #json_doc = json_doc.replace("$oid", "id")
-        #json_doc = json_doc.replace("_id", "uid")
-        #print(json_doc)
-        #return json.loads(str(json_doc))
+        print("-------------------------------KAROL La Niña de las flores-5--------------------------------")
+
+        
+
+        print("-------------------------------KAROL La Niña de las flores-5--------------------------------")
+        json_doc = json.dumps(single_doc,default=json_util.default)
+        json_doc = json_doc.replace("$oid", "id")
+        json_doc = json_doc.replace("_id", "uid")
+        print("-------------------------------KAROL La Niña de las flores-6--------------------------------")
+        print(json_doc)
+        return json.loads(str(json_doc))
 #-----------------------------------------------------------------------------------------------------------------------#
          
     def closeConexion(self):
