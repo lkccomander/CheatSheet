@@ -47,17 +47,23 @@ class Conn():
 
         for doc in new_dict:
             json_doc = json.dumps(doc, default=json_util.default)
-            #json_doc = json_doc.replace("$oid", "id")            #json_doc = json_doc.replace("_id", "uid")
+            json_doc = json_doc.replace("$oid", "id")
+            json_doc = json_doc.replace("_id", "uid")
+            #json_doc = json_doc.replace('\\', '')
             #print("---------------------------------------------------------------")
             #print(doc)
             json_docs.append(json_doc)
         
-            
+        #to export https://www.w3schools.com/python/python_file_write.asp   
         print(json_docs)
+        f = open("Demo.json", "w")
+        f.write(str(json_docs))
 
         print("-------------------------------KAROL La Niña de las flores-6.1--------------------------------")
         with open('data1.json', 'w') as outfile:
-          print(json.dump(json_docs, outfile, sort_keys = True, indent = 4,ensure_ascii = False))
+          json.dump(json_docs, outfile, sort_keys = True, indent = 4,ensure_ascii = False)
+          
+
 
         print("-------------------------------KAROL La Niña de las flores-6--------------------------------")
         
@@ -65,12 +71,17 @@ class Conn():
         # Write JSON file
         with io.open('data.json', 'w', encoding='utf8') as outfile:
           str_ = json.dumps(json_docs,indent=4, sort_keys=True,separators=(',', ': '), ensure_ascii=False)
-          outfile.write(to_unicode(str_))
+          outfile.write(str(to_unicode(str_)))
         #Check https://github.com/MartinThoma/mpu
         print("-------------------------------KAROL La Niña de las flores-7--------------------------------")
-        print(str_)
+        print(str(str_))
 
         print("-------------------------------KAROL La Niña de las flores-8--------------------------------")
+
+        with open('data.json', 'r') as filehandle:
+         basiclist = json.load(filehandle)
+         print(basiclist)
+
 
 
         #json_doc = json.dumps(single_doc,default=json_util.default)
