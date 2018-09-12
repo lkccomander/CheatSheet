@@ -86,7 +86,7 @@ class Conn():
            print(self.list_database_names())
 
     def getallCollections(self,pdb):
-           Client = pymongo.MongoClient("mongodb+srv://userMongo4:123admina@cluster0-0njxn.mongodb.net/test?retryWrites=true")
+           #Client = pymongo.MongoClient("mongodb+srv://userMongo4:123admina@cluster0-0njxn.mongodb.net/test?retryWrites=true")
            #db.list_collection_names()
            self.db = pdb
 
@@ -123,14 +123,3 @@ class Conn():
         json_doc = json.dumps(list(all_doc),default=json_util.default)
         json_doc = json_doc.replace("_id", "uid")
         return json.loads(str(json_doc))
-
-
-
- 
-
-
-
-
-
-
-
