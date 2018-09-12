@@ -62,7 +62,12 @@ print("-------------------------------KAROL La Niña de las flores--------------
 pcode = 1800
 json_codes = ccmpCode2.return_code(pcode)
 
-pprint.pprint(json_codes)
+#https://www.mydatahack.com/how-to-get-data-from-mongodb-with-python/
+test = ccmpCode2.return_code(pcode)
+
+for i in test:
+    print(" posicion de test" + i),
+
 
 #Web server http://bottlepy.org/docs/dev/
 
