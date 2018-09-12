@@ -53,17 +53,13 @@ print("-------------------------------KAROL La Niña de las flores-3------------
 print(ccmpCode2.db)
 print("-------------------------------KAROL La Niña de las flores-4--------------------------------")
 ccmpCode2.getDB(db)
-
-
-
-
-
-
-
 print("-------------------------------KAROL La Niña de las flores---------------------------------")
+pcode = 100
+ccmpCode2.return_code(pcode)
 print("-------------------------------KAROL La Niña de las flores---------------------------------")
 
-
+pcode = 1800
+ccmpCode2.return_code(pcode)
 
 
 

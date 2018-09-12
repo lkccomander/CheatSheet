@@ -15,6 +15,8 @@ except NameError:
     to_unicode = str
 
 
+#To do a class variable to set the database in the enviroment
+
 class Conn():
     """description of class"""
         
@@ -35,7 +37,7 @@ class Conn():
         mydb = self1.CheatSheet
         mycol = mydb.CheatSheet
         json_docs = []
-        single_doc = mycol.find().sort("code", -1)
+        #single_doc = mycol.find().sort("code", -1)
         new_dict = mycol.find().sort("code", -1)
         #for x in single_doc:
             #print(x)
@@ -86,6 +88,23 @@ class Conn():
            Client = pymongo.MongoClient("mongodb+srv://userMongo4:123admina@cluster0-0njxn.mongodb.net/test?retryWrites=true")
            #db.list_collection_names()
            self.db = pdb
+
+    def return_code(self,pcode):
+           Client = pymongo.MongoClient("mongodb+srv://userMongo4:123admina@cluster0-0njxn.mongodb.net/test?retryWrites=true")
+           mydb = Client.CheatSheet
+           mycol = mydb.CheatSheet
+           json_docs = []
+           my_query = {"code":pcode}
+           my_fields = {"_id":0,"category":1,"code":1,"name":1}
+           new_dict = mycol.find(my_query,my_fields).sort("code", -1)
+           print("-------------------------------RESULT--------------------------------")
+           for doc in new_dict:
+            json_doc = json.dumps(doc, default=json_util.default)
+            json_doc = json_doc.replace("$oid", "id")
+            json_doc = json_doc.replace("_id", "uid")            
+            json_docs.append(json_doc)
+        #to export https://www.w3schools.com/python/python_file_write.asp   
+            print(json_docs)
 
 
 
