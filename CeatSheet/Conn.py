@@ -9,6 +9,7 @@ import json
 import random
 import code
 import io
+import pprint
 try:
     to_unicode = unicode
 except NameError:
@@ -95,16 +96,18 @@ class Conn():
            mycol = mydb.CheatSheet
            json_docs = []
            my_query = {"code":pcode}
-           my_fields = {"_id":0,"category":1,"code":1,"name":1}
+           my_fields = {"_id":0,"name":1,"category":1,"code":1}
            new_dict = mycol.find(my_query,my_fields).sort("code", -1)
+           pprint.pprint(mycol.find(my_query,my_fields).sort("code", -1))
            print("-------------------------------RESULT--------------------------------")
            for doc in new_dict:
             json_doc = json.dumps(doc, default=json_util.default)
             json_doc = json_doc.replace("$oid", "id")
-            json_doc = json_doc.replace("_id", "uid")            
+            #json_doc = json_doc.replace("_id", "uid")            
             json_docs.append(json_doc)
+        #print(new_dict)
         #to export https://www.w3schools.com/python/python_file_write.asp   
-            print(json_docs)
+           return json_docs   
 
 
 

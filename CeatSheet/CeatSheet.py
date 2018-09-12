@@ -4,6 +4,7 @@ from CCMPcode import CCMPcode
 from class2 import class2
 from Conn import Conn
 from pymongo import MongoClient
+import pprint
 
 #https://hackernoon.com/turning-vs-code-into-a-killer-mongodb-admin-tool-2514f1596a6c
 #https://code.visualstudio.com/docs/python/python-tutorial
@@ -52,16 +53,18 @@ ccmpCode2.setDB(db)
 print("-------------------------------KAROL La Niña de las flores-3--------------------------------")
 print(ccmpCode2.db)
 print("-------------------------------KAROL La Niña de las flores-4--------------------------------")
-ccmpCode2.getDB(db)
+#ccmpCode2.getDB(db)
 print("-------------------------------KAROL La Niña de las flores---------------------------------")
-pcode = 100
-ccmpCode2.return_code(pcode)
+#pcode = 100
+#ccmpCode2.return_code(pcode)
 print("-------------------------------KAROL La Niña de las flores---------------------------------")
 
 pcode = 1800
-ccmpCode2.return_code(pcode)
+json_codes = ccmpCode2.return_code(pcode)
 
+pprint.pprint(json_codes)
 
+#Web server http://bottlepy.org/docs/dev/
 
 #miConexion = Conn("CheatSheet","123")
 #miConexion.closeConexion()
