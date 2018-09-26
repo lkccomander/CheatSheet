@@ -1,0 +1,4 @@
+Links:
+
+https://medium.com/riow/how-to-setup-a-django-development-environment-on-mac-968d129bc661
+-- Set enviroment on mac
