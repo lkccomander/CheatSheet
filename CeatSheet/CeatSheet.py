@@ -71,7 +71,7 @@ json_codes1 = ccmpCode2.return_code(pcode)
 test = ccmpCode2.return_code(pcode)
 
 for i in test:
-    print(" posicion de test:" + i),
+    print(" posicion de test" + i)
 
 
 #Web server http://bottlepy.org/docs/dev/
