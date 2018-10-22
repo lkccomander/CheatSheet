@@ -123,3 +123,35 @@ class Conn():
         json_doc = json.dumps(list(all_doc),default=json_util.default)
         json_doc = json_doc.replace("_id", "uid")
         return json.loads(str(json_doc))
+
+
+    def get_db():
+        #
+        #Configuration method to return db instance
+        #
+        db = getattr(g, "_database", None)
+        CCcode_DB_URI = current_app.config["CCcode_DB_URI"]
+        if db is None:
+
+        #"""
+        #Ticket: Connection Pooling
+
+        #Please change the configuration of the MongoClient object by setting the
+        #maximum connection pool size to 50 active connections.
+        #"""
+
+        #"""
+        #Ticket: Timeouts
+
+        #Please prevent the program from waiting indefinitely by setting the
+        #write concern timeout limit to 2500 milliseconds.
+        #"""
+
+          db = g._database = MongoClient(
+        CCcode_DB_URI,
+        # TODO: Connection Pooling
+        # Set the maximum connection pool size to 50 active connections.
+        # TODO: Timeouts
+        # Set the write timeout limit to 2500 milliseconds.
+        )["mflix"]
+        return db

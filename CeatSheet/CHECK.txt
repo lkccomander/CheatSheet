@@ -7,3 +7,11 @@ https://www.mydatahack.com/how-to-get-data-from-mongodb-with-python/
 -- Python extract MongoDB
 
 https://www.youtube.com/watch?v=XWkLyn0Fct4
+
+https://db-engines.com/en/system/MongoDB%3BRiak+KV
+
+- NOSQL
+
+https://getakka.net/index.html
+
+AKKA net
