@@ -16,7 +16,7 @@ except NameError:
     to_unicode = str
 
 
-#To do a class variable to set the database in the enviroment
+#To do a class variable to set the database in the enviroment  Soc0tr0c066
 
 class Conn():
     """description of class"""
@@ -124,7 +124,7 @@ class Conn():
         json_doc = json_doc.replace("_id", "uid")
         return json.loads(str(json_doc))
 
-
+'''
     def get_db():
         #
         #Configuration method to return db instance
@@ -154,4 +154,4 @@ class Conn():
         # TODO: Timeouts
         # Set the write timeout limit to 2500 milliseconds.
         )["CheatSheet"]
-        return db
+        return db '''
